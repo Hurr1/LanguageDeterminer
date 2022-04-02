@@ -1,0 +1,3 @@
+/home/hurr1cane/Desktop/NAI/LanguageDeterminer/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/hurr1cane/Desktop/NAI/LanguageDeterminer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/hurr1cane/Desktop/NAI/LanguageDeterminer/cmake-build-debug/CMakeFiles/LanguageDeterminer.dir
