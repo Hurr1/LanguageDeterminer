@@ -6,7 +6,7 @@
 class Perceptron
 {
 public:
-    Perceptron(std::string prcpClass);
+    explicit Perceptron(std::string prcpClass);
     ~Perceptron() = default;
 
     [[nodiscard]] double getThreshold() const;
