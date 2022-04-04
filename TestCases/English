@@ -1,0 +1,17 @@
+1.
+Semigroups may be considered a special case of magmas, where the operation is associative, or as a generalization of groups, without requiring the existence of an
+identity element or inverses.[note 1] As in the case of groups or magmas, the semigroup operation need not be commutative, so x·y is not necessarily equal to y·x;
+a well-known example of an operation that is associative but non-commutative is matrix multiplication. If the semigroup operation is commutative, then the semigroup
+is called a commutative semigroup or (less often than in the analogous case of groups) it may be called an abelian semigroup. DEFINE
+
+2.
+If A is both a left ideal and a right ideal then it is called an ideal (or a two-sided ideal).
+If S is a semigroup, then the intersection of any collection of subsemigroups of S is also a subsemigroup of S. So the subsemigroups of S form a complete lattice.
+An example of a semigroup with no minimal ideal is the set of positive integers under addition. The minimal ideal of a commutative semigroup, when it exists, is
+a group. DEFINE
+
+3.
+A subsemigroup which is also a group is called a subgroup. There is a close relationship between the subgroups of a semigroup and its idempotents.
+Each subgroup contains exactly one idempotent, namely the identity element of the subgroup. For each idempotent e of the semigroup there is a unique maximal
+subgroup containing e. Each maximal subgroup arises in this way, so there is a one-to-one correspondence between idempotents and maximal subgroups.
+Here the term maximal subgroup differs from its standard use in group theory. DEFINE

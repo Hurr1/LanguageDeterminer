@@ -84,11 +84,11 @@ build CMakeFiles/LanguageDeterminer.dir/Source_/Perceptron.cpp.o: CXX_COMPILER__
   OBJECT_DIR = CMakeFiles/LanguageDeterminer.dir
   OBJECT_FILE_DIR = CMakeFiles/LanguageDeterminer.dir/Source_
 
-build CMakeFiles/LanguageDeterminer.dir/Header/Algorithm.cpp.o: CXX_COMPILER__LanguageDeterminer_Debug /home/hurr1cane/Desktop/NAI/LanguageDeterminer/Header/Algorithm.cpp || cmake_object_order_depends_target_LanguageDeterminer
-  DEP_FILE = CMakeFiles/LanguageDeterminer.dir/Header/Algorithm.cpp.o.d
+build CMakeFiles/LanguageDeterminer.dir/Source_/Algorithm.cpp.o: CXX_COMPILER__LanguageDeterminer_Debug /home/hurr1cane/Desktop/NAI/LanguageDeterminer/Source$ /Algorithm.cpp || cmake_object_order_depends_target_LanguageDeterminer
+  DEP_FILE = CMakeFiles/LanguageDeterminer.dir/Source_/Algorithm.cpp.o.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/LanguageDeterminer.dir
-  OBJECT_FILE_DIR = CMakeFiles/LanguageDeterminer.dir/Header
+  OBJECT_FILE_DIR = CMakeFiles/LanguageDeterminer.dir/Source_
 
 
 # =============================================================================
@@ -98,7 +98,7 @@ build CMakeFiles/LanguageDeterminer.dir/Header/Algorithm.cpp.o: CXX_COMPILER__La
 #############################################
 # Link the executable LanguageDeterminer
 
-build LanguageDeterminer: CXX_EXECUTABLE_LINKER__LanguageDeterminer_Debug CMakeFiles/LanguageDeterminer.dir/Source_/main.cpp.o CMakeFiles/LanguageDeterminer.dir/Source_/Perceptron.cpp.o CMakeFiles/LanguageDeterminer.dir/Header/Algorithm.cpp.o
+build LanguageDeterminer: CXX_EXECUTABLE_LINKER__LanguageDeterminer_Debug CMakeFiles/LanguageDeterminer.dir/Source_/main.cpp.o CMakeFiles/LanguageDeterminer.dir/Source_/Perceptron.cpp.o CMakeFiles/LanguageDeterminer.dir/Source_/Algorithm.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LanguageDeterminer.dir
   POST_BUILD = :

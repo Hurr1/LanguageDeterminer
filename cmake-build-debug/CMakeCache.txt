@@ -215,6 +215,15 @@ LanguageDeterminer_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 LanguageDeterminer_SOURCE_DIR:STATIC=/home/hurr1cane/Desktop/NAI/LanguageDeterminer
 
+//Value Computed by CMake
+cmake-build-debug/LanguageDeterminer_BINARY_DIR:STATIC=/home/hurr1cane/Desktop/NAI/LanguageDeterminer/cmake-build-debug
+
+//Value Computed by CMake
+cmake-build-debug/LanguageDeterminer_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+cmake-build-debug/LanguageDeterminer_SOURCE_DIR:STATIC=/home/hurr1cane/Desktop/NAI/LanguageDeterminer
+
 
 ########################
 # INTERNAL cache entries
