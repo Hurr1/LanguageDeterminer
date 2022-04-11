@@ -15,9 +15,9 @@ double Perceptron::at(std::size_t index) const
 Perceptron::Perceptron(std::string prcpClass)
 {
     this->_class = prcpClass;
-    this->_weights = std::vector<double>(26,6);
-    this->_threshold = 1;
-    this->_alpha = 0.5;
+    this->_weights = std::vector<double>(26,std::rand()%10);
+    this->_threshold = 5;
+    this->_alpha = 0.3;
 }
 
 std::vector<double> Perceptron::getVector() const
@@ -43,7 +43,6 @@ void Perceptron::teach(std::string path,const std::string &language)
 
     double dotProduct = ai::dotProduct( this->_weights, input);
 
-    ai::deltaAlgorithm(this, input, 1, 0, dotProduct, this->_alpha);
     int y = dotProduct >= this->_threshold ? 1 : 0;
 
     if((language.compare(this->_class)!=0 && y == 1) || (language.compare(this->_class)==0 && y == 0))

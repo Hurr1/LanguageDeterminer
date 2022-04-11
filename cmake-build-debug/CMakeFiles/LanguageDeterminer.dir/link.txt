@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/LanguageDeterminer.dir/Source_/main.cpp.o CMakeFiles/LanguageDeterminer.dir/Source_/Perceptron.cpp.o CMakeFiles/LanguageDeterminer.dir/Source_/Algorithm.cpp.o  -o LanguageDeterminer 

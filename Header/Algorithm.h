@@ -4,7 +4,7 @@
 
 namespace ai
 {
-    double dotProduct(std::vector<double> &weights, std::vector<double> &inputs);
+    double dotProduct(std::vector<double> weights, std::vector<double> inputs);
 
     void deltaAlgorithm(Perceptron *prc, std::vector<double> input, int d, int y, double dotProduct, double alpha);
 

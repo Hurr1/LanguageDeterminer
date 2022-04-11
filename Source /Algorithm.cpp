@@ -5,7 +5,7 @@
 #include <iostream>
 #include "../Header/Algorithm.h"
 
-double ai::dotProduct(std::vector<double> &weights, std::vector<double> &inputs)
+double ai::dotProduct(std::vector<double> weights, std::vector<double> inputs)
 {
     double dotProduct = 0;
     for(int i =0;i<weights.size();i++)
@@ -79,18 +79,45 @@ void ai::testLanguage(std::vector<Perceptron *> &net, std::string path)
     std::vector<std::pair<double,std::string>> answers;
 
 
-    for(const auto& prcp : net) {
+    for(const auto& prcp : net)
+    {
         std::vector<double> weights = ai::normalizeVector(std::move(prcp->getVector()));
         double dot = ai::dotProduct(weights, text);
-        answers.emplace_back(std::pair<double, std::string>(dot, prcp->getClass()));
+        std::cout<<prcp->getClass()<<"------"<<dot<<"--------"<<prcp->getThreshold()<<'\n';
+        if(dot>prcp->getThreshold())
+        {
+            answers.emplace_back(std::pair<double, std::string>(dot, prcp->getClass()));
+        }
     }
 
-    std::sort(answers.begin(),answers.end(),
-              [](std::pair<double,std::string> _1, std::pair<double,std::string> _2 )
-                    {return _1.first > _2.first;});
-    std::cout<<'\n'<<"----------------------------------------------------------"
-             <<'\n'<<"Languge for text in file on path " << path << " is: "<< answers.at(0).second
-             <<'\n'<<"----------------------------------------------------------"<<'\n';
+    if(!answers.empty())
+    {
+        std::sort(answers.begin(), answers.end(),
+                  [](std::pair<double, std::string> _1, std::pair<double, std::string> _2) {
+                      return _1.first > _2.first;
+                  });
+        std::cout << '\n' << "----------------------------------------------------------"
+                  << '\n' << "Languge for text in file on path " << path << " is: " << answers.at(0).second
+                  << '\n' << "----------------------------------------------------------" << '\n';
+    }
+    else
+    {
+        for(const auto& prcp : net)
+        {
+            std::vector<double> weights = ai::normalizeVector(std::move(prcp->getVector()));
+            double dot = ai::dotProduct(weights, text);
+            answers.emplace_back(std::pair<double, std::string>(dot, prcp->getClass()));
+        }
+
+        std::sort(answers.begin(), answers.end(),
+                  [](std::pair<double, std::string> _1, std::pair<double, std::string> _2) {
+                      return _1.first > _2.first;
+                  });
+        std::cout << '\n' << "----------------------------------------------------------"
+                  << '\n' << "Languge for text in file on path " << path << " is probably: " << answers.at(0).second
+                  << '\n' << "Please, give more information about this sentence"
+                  << '\n' << "----------------------------------------------------------" << '\n';
+    }
 }
 
 void ai::userInput(std::vector<Perceptron*> neuralNetwork)

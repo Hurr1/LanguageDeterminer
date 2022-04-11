@@ -6,10 +6,9 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.21"
+						"string" : "3.17.5"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -39,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "LanguageDeterminer::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-LanguageDeterminer-Debug-6753bc24d5c2c9cb2999.json",
+					"jsonFile" : "target-LanguageDeterminer-Debug-1fbdbd19488476a3abcf.json",
 					"name" : "LanguageDeterminer",
 					"projectIndex" : 0
 				}
@@ -49,12 +48,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/hurr1cane/Desktop/NAI/LanguageDeterminer/cmake-build-debug",
-		"source" : "/home/hurr1cane/Desktop/NAI/LanguageDeterminer"
+		"build" : "/Users/egorpatenko/Desktop/LanguageDeterminer/LanguageDeterminer/cmake-build-debug",
+		"source" : "/Users/egorpatenko/Desktop/LanguageDeterminer/LanguageDeterminer"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 3
+		"minor" : 0
 	}
 }

@@ -19,12 +19,12 @@ int main()
         neuralNetwork.emplace_back(new Perceptron(prcpclass));
 
     }
-    for (const auto &entry: std::filesystem::directory_iterator(path))
+    for(int i = 0;i<10;i++)
     {
-        std::string language = entry.path();
-        ai::removeWordFromLine(language,path);
-        for(int i = 0; i<5;i++)
+        for (const auto &entry: std::filesystem::directory_iterator(path))
         {
+            std::string language = entry.path();
+            ai::removeWordFromLine(language, path);
             for (auto *perceptron: neuralNetwork)
             {
                 for (const auto &entry: std::filesystem::directory_iterator(entry.path()))
