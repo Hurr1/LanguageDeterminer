@@ -78,12 +78,12 @@ void ai::testLanguage(std::vector<Perceptron *> &net, std::string path)
     text = ai::normalizeVector(std::move(text));
     std::vector<std::pair<double,std::string>> answers;
 
-
+    std::cout<<'\n'<<std::left<<std::setw(30)<<"Language"<<std::left<<std::setw(20)<<"DotProduct"<<"Threshold"<<'\n';
     for(const auto& prcp : net)
     {
         std::vector<double> weights = ai::normalizeVector(std::move(prcp->getVector()));
         double dot = ai::dotProduct(weights, text);
-        std::cout<<prcp->getClass()<<"------"<<dot<<"--------"<<prcp->getThreshold()<<'\n';
+        std::cout<<std::setw(30)<< std::left << prcp->getClass()<<std::setw(20)<<dot<<prcp->getThreshold()<<'\n';
         if(dot>prcp->getThreshold())
         {
             answers.emplace_back(std::pair<double, std::string>(dot, prcp->getClass()));

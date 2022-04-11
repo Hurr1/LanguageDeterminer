@@ -12,12 +12,12 @@ double Perceptron::at(std::size_t index) const
     return this->_weights.at(index);
 }
 
-Perceptron::Perceptron(std::string prcpClass)
+Perceptron::Perceptron(std::string prcpClass,double threshold, double alpha)
 {
     this->_class = prcpClass;
-    this->_weights = std::vector<double>(26,std::rand()%10);
-    this->_threshold = 5;
-    this->_alpha = 0.3;
+    this->_weights = std::vector<double>(26,(std::rand()%10)+1);
+    this->_threshold = threshold;
+    this->_alpha = alpha;
 }
 
 std::vector<double> Perceptron::getVector() const
