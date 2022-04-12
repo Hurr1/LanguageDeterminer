@@ -26,7 +26,7 @@ Czech           | `BarcelonaCZ,  BillGatesCZ,  ThomasAlvaEdisonCZ`
 
 If program executes without arguments, variables `Threshold` and `Delta` will be assigned with values `5.0` and `0.3` 
 
-If argument for varibale `Threshold` is less than `0.1`, it will be assigned with value `5.0`;
+If argument for variable `Threshold` is less than `0.1`, it will be assigned with value `5.0`;
 
 If argument for variable `Delta` is less than `0.1` or greater than `1.01`, it will be assigned with value `0.3`;
 
