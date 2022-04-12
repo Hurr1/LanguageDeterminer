@@ -44,7 +44,7 @@ After determining the language, the neural network will highlight the results of
 
 ### Output example
 
-
+![output.jpg](output.jpg)
 
 
 
