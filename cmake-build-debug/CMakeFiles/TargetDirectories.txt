@@ -1,3 +1,0 @@
-/Users/egorpatenko/Desktop/LanguageDeterminer/LanguageDeterminer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/egorpatenko/Desktop/LanguageDeterminer/LanguageDeterminer/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/egorpatenko/Desktop/LanguageDeterminer/LanguageDeterminer/cmake-build-debug/CMakeFiles/LanguageDeterminer.dir
