@@ -12,12 +12,11 @@ public:
     [[nodiscard]] double getThreshold() const;
     [[nodiscard]] double at(std::size_t index) const;
     [[nodiscard]] std::vector<double> getVector() const;
+    [[nodiscard]] std::string getClass() const;
 
     void setThreshold(double threshold);
     void setVector(std::vector<double> &&vector);
     void teach(std::string path,const std::string &language);
-
-    std::string getClass();
 
 private:
     double                          _threshold;
