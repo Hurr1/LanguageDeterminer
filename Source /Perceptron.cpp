@@ -25,6 +25,11 @@ std::vector<double> Perceptron::getVector() const
     return this->_weights;
 }
 
+std::string Perceptron::getClass() const
+{
+    return this->_class;
+}
+
 void Perceptron::setThreshold(double threshold)
 {
     this->_threshold = threshold;
@@ -50,9 +55,4 @@ void Perceptron::teach(std::string path,const std::string &language)
         int d = y == 1? 0 : 1;
         ai::deltaAlgorithm(this, input, d, y, dotProduct, this->_alpha);
     }
-}
-
-std::string Perceptron::getClass()
-{
-    return this->_class;
 }
