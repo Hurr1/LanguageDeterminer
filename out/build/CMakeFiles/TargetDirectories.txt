@@ -1,0 +1,9 @@
+/home/hurr1cane/Desktop/C++/LanguageDeterminer/out/build/CMakeFiles/rebuild_cache.dir
+/home/hurr1cane/Desktop/C++/LanguageDeterminer/out/build/CMakeFiles/edit_cache.dir
+/home/hurr1cane/Desktop/C++/LanguageDeterminer/out/build/CMakeFiles/LanguageDeterminer.dir
+/home/hurr1cane/Desktop/C++/LanguageDeterminer/out/build/Algorithm/CMakeFiles/rebuild_cache.dir
+/home/hurr1cane/Desktop/C++/LanguageDeterminer/out/build/Algorithm/CMakeFiles/edit_cache.dir
+/home/hurr1cane/Desktop/C++/LanguageDeterminer/out/build/Algorithm/CMakeFiles/Algorithm.dir
+/home/hurr1cane/Desktop/C++/LanguageDeterminer/out/build/Perceptron/CMakeFiles/rebuild_cache.dir
+/home/hurr1cane/Desktop/C++/LanguageDeterminer/out/build/Perceptron/CMakeFiles/edit_cache.dir
+/home/hurr1cane/Desktop/C++/LanguageDeterminer/out/build/Perceptron/CMakeFiles/Perceptron.dir
