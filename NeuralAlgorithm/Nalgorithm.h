@@ -3,6 +3,6 @@
 
 namespace nalgs
 {
-    void testLanguage(std::vector<Perceptron*> &net, std::string path);
+    void testLanguage(std::vector<Perceptron*> &net, const std::string& path);
     void userInput(std::vector<Perceptron*> neuralNetwork);
 }

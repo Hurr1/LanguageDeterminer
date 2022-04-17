@@ -6,18 +6,20 @@
 #include <iomanip>
 #include <fstream>
 
-void nalgs::testLanguage(std::vector<Perceptron *> &net, std::string path)
+void nalgs::testLanguage(std::vector<Perceptron *> &net, const std::string& path)
 {
     std::vector<double> text = algs::getVectorChar(path);
     text = algs::normalizeVector(std::move(text));
     std::vector<std::pair<double,std::string>> answers;
 
     std::cout<<'\n'<<std::left<<std::setw(30)<<"Language"<<std::left<<std::setw(20)<<"DotProduct"<<"Threshold"<<'\n';
+
     for(const auto& prcp : net)
     {
         std::vector<double> weights = algs::normalizeVector(std::move(prcp->getVector()));
         double dot = algs::dotProduct(weights, text);
         std::cout<<std::setw(30)<< std::left << prcp->getClass()<<std::setw(20)<<dot<<prcp->getThreshold()<<'\n';
+
         if(dot>prcp->getThreshold())
         {
             answers.emplace_back(std::pair<double, std::string>(dot, prcp->getClass()));
@@ -27,7 +29,7 @@ void nalgs::testLanguage(std::vector<Perceptron *> &net, std::string path)
     if(!answers.empty())
     {
         std::sort(answers.begin(), answers.end(),
-                  [](std::pair<double, std::string> _1, std::pair<double, std::string> _2) {
+                  [](const auto& _1, const auto& _2) {
                       return _1.first > _2.first;
                   });
         std::cout << '\n' << "----------------------------------------------------------"
@@ -36,15 +38,15 @@ void nalgs::testLanguage(std::vector<Perceptron *> &net, std::string path)
     }
     else
     {
-        for(const auto& prcp : net)
+        for(const auto& pPerceptron : net)
         {
-            std::vector<double> weights = algs::normalizeVector(std::move(prcp->getVector()));
+            std::vector<double> weights = algs::normalizeVector(std::move(pPerceptron->getVector()));
             double dot = algs::dotProduct(weights, text);
-            answers.emplace_back(std::pair<double, std::string>(dot, prcp->getClass()));
+            answers.emplace_back(std::pair<double, std::string>(dot, pPerceptron->getClass()));
         }
 
         std::sort(answers.begin(), answers.end(),
-                  [](std::pair<double, std::string> _1, std::pair<double, std::string> _2) {
+                  [](const auto& _1, const auto&_2) {
                       return _1.first > _2.first;
                   });
         std::cout << '\n' << "----------------------------------------------------------"
@@ -63,7 +65,7 @@ void nalgs::userInput(std::vector<Perceptron*> neuralNetwork)
     std::string text;
 
     while(mainLoop) {
-        myfile.open ("ToTest/Input");
+        myfile.open ("Resources/ToTest/Input");
         std::cout << '\n' << "If you want to STOP input write down <STOPINPUT> <----(UpperCase)"
                   << '\n' << "If you want to define language for input, write down <DEFINE> <----(UpperCase)"
                   << '\n';
@@ -79,7 +81,7 @@ void nalgs::userInput(std::vector<Perceptron*> neuralNetwork)
             else if (text.compare("DEFINE") == 0)
             {
                 myfile.close();
-                nalgs::testLanguage(neuralNetwork, "ToTest/Input");
+                nalgs::testLanguage(neuralNetwork, "Resources/ToTest/Input");
                 break;
             }
             else
