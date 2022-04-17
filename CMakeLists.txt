@@ -24,6 +24,8 @@ target_include_directories(${PROJECT_NAME} PUBLIC NeuralAlgorithm)
 target_link_directories(${PROJECT_NAME} PRIVATE NeuralAlgorithm)
 target_link_libraries(${PROJECT_NAME} NeuralAlgorithm)
 
+set_target_properties(LanguageDeterminer PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+
 
 
 
