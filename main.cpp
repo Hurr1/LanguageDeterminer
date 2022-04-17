@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
         threshold = 5;
         alpha = 0.3;
     }
-
+    
     std::string path = "Languages/";
     std::vector<Perceptron*> neuralNetwork;
 
@@ -32,7 +32,12 @@ int main(int argc, char* argv[])
         std::string prcpclass = entry.path();
         algs::removeWordFromLine(prcpclass, path);
         neuralNetwork.emplace_back(new Perceptron(prcpclass,threshold,alpha));
+    }
 
+    if(neuralNetwork.empty())
+    {
+        std::cout<<"You did not add any language"<<'\n';
+        return 1;
     }
     for(int i = 0;i<10;i++)
     {
