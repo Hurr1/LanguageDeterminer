@@ -1,6 +1,6 @@
 # LanguageDeterminer(Single-Layer Neural Network)
 
-## Added script for Linux (Releases v1.1)
+## Added script for Linux (Release v1.1)
 
 Script for CMakeLists.txt file  
 `linuxScropt.sh`
