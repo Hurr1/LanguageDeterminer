@@ -1,5 +1,10 @@
 # LanguageDeterminer(Single-Layer Neural Network)
 
+## Added script for Linux
+`linuxScropt.sh`
+<Script for CMakeLists.txt file>
+
+
 ## Program arguments
 
 1: Threshold  
