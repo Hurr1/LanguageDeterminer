@@ -2,7 +2,7 @@
 
 ## Added script for Linux
 `linuxScropt.sh`
-<Script for CMakeLists.txt file>
+Script for CMakeLists.txt file
 
 
 ## Program arguments
