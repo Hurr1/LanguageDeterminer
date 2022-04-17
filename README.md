@@ -1,12 +1,17 @@
 # LanguageDeterminer(Single-Layer Neural Network)
 
+## Added script for Linux (Release v1.1)
+
+Script for CMakeLists.txt file  
+`linuxScropt.sh`
+
 ## Program arguments
 
 1: Threshold  
 2: Alpha 
 
 ## Add language
-To add a language to the neural network, create a folder with the name of the language in the 'resources' folder and fill it with some texts
+To add a language to the neural network, create a folder with the name of the language in the 'Languages' folder and fill it with some texts
 
 ### Recources folder
 
@@ -34,7 +39,7 @@ If argument for variable `Delta` is less than `0.1` or greater than `1.01`, it w
 
 When the program starts, it goes through all the texts 10 times and tries to train the neural network.
 
-After that, the program will try to determine the language for the text located in the path "ToTest/Text.txt".
+After that, the program will try to determine the language for the text located in the path "Resources/ToTest/Text.txt".
 
 Next, the program will wait for the user-input, for which, after entering the `<DEFINE>` keyword, the language will be determined.
 
@@ -45,6 +50,4 @@ After determining the language, the neural network will highlight the results of
 ### Output example
 
 ![output.jpg](output.jpg)
-
-
 
