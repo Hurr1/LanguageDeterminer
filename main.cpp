@@ -24,6 +24,7 @@ int main(int argc, char* argv[])
         alpha = 0.3;
     }
     
+
     std::string path = "Languages/";
     std::vector<Perceptron*> neuralNetwork;
 
@@ -41,14 +42,14 @@ int main(int argc, char* argv[])
     }
     for(int i = 0;i<10;i++)
     {
-        for (const auto &entry: std::filesystem::directory_iterator(path))
+        for (const auto &entry_directory: std::filesystem::directory_iterator(path))
         {
-            std::string language = entry.path();
+            std::string language = entry_directory.path();
             algs::removeWordFromLine(language, path);
             for (auto *perceptron: neuralNetwork)
             {
-                for (const auto &entry: std::filesystem::directory_iterator(entry.path()))
-                    perceptron->teach(entry.path(), language);
+                for (const auto &entry_file: std::filesystem::directory_iterator(entry_directory.path()))
+                    perceptron->teach(entry_file.path(), language);
             }
         }
     }
